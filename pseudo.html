@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <head>
+            <style>
+                p::first-letter {
+                    font-size: 2em;
+                    color: darkblue;
+                }
+                p::selection {
+                    background-color: yellow;
+                    color: rgb(218, 13, 13);
+                }
+                h1::before {
+                    content: "Welcome to.😊 ";
+                    color: darkgreen;
+                }
+                h1::after {
+                    content: " - Enjoy your stay!";
+                    color: darkgreen;
+                }
+                /* Pseudo-class selectors Example */
+                /* 1. :hover */
+                button:hover{
+                    background-color: lightblue;
+                    color: darkblue;
+                }
+                input:focus{
+                    background-color: lightyellow;
+                    outline: 2px solid orange;
+                }
+                p:first-child{
+                    font-weight: bold;
+                    color: red;
+                }
+                p:last-child{
+                    font-style: italic;
+                    color: purple;
+                }
+                ul li:nth-child(2) {
+                    color: green;
+                }
+                div p:nth-of-type(2) {
+                    color: blue;
+                }
+                div h3:only-child{
+                    color: orange;
+                }
+                input[type="checkbox"]:checked {
+                    background-color: yellow;
+                }
+                input:disabled {
+                    background-color: lightgray;
+                    color: darkgray;
+                }
+                div:empty{
+                    border:2px darkcyan solid;
+                    height: 50px;
+                    width: 50px;
+                }
+            </style>
+        </head>
+        <title>Pseudo-class Selectors Example</title>
+        <h1>Pseudo-clAss Selectors Example</h1>
+        <Button>Hover Over me</Button>
+        <br><br>
+        <input type="text" placeholder="Click to Focus...">
+        <br><br>
+        <div class="container">
+            <p>First paragraph-styled by:first-chlid </p>
+            <p>Middle paragraph</p>
+            <p>Last paragraph-styled by:last-child</p>
+        </div>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2(styled by:nth-chlid(2))</li>
+            <li>Item 3</li>
+        </ul>
+        <div>
+            <p>First paragraph inside div </p>
+            <p>Second paragraph inside div</p>
+        </div>
+        <br>
+        <div></div><!--styled by :empty-->
+    <br>
+    <div>
+        <h3>Only Child div(Styled by:only child)</h3>
+    </div>
+    <input type=""checkbox">Check Me!
+    <br><br>
+    <input type=""text"disabled value="Disabled Input">
+    </body>
+</html>
